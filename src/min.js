@@ -3,14 +3,14 @@ const min = (list)=>{
     if(list == undefined || list.length == 0)
         return undefined ;
     endIndex = list.length - 1 ;
-    return findMaxInList(list, endIndex);
+    return findMinInList(list, endIndex);
     
 }
 
-const findMaxInList = (list, index)=>{
+const findMinInList = (list, index)=>{
     if(index == firstElementIndex )
         return list[index];
-    return Math.min(list[index], findMaxInList(list, index-1));
+    return Math.min(list[index], findMinInList(list, index-1));
 }
 
 module.exports=min
